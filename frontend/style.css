@@ -1,5 +1,6 @@
 body {
     background-color: #F1F0E8;
+    
 }
 
 nav {
@@ -17,7 +18,12 @@ nav {
 h1 {
     display: flex;
     justify-content: center;
-    color: #493D9E;
+    color: #780C28;
+    font-family: 'Rock Salt', serif;
+    font-weight: 700;
+}
+
+section p {
     font-family: 'Bangers', serif;
 }
 
@@ -38,7 +44,17 @@ h1 {
 footer {
     display: flex;
     justify-content: center;
-    padding: .1rem 2rem;
+    padding: .4rem 2rem;
     background-color: transparent;
     border: solid 3px #493D9E;
+    font-family: 'Bangers', serif;
+}
+
+footer a { 
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline overline;
+    color: #780C28;
 }
