@@ -57,6 +57,9 @@
                     theme: theme,
                     emotion: emotion
                 };
+
+                const lyricsText = document.getElementById('lyricsText');
+                lyricsText.innerHTML = '...';
                 try {
                     // Make the POST request to the backend
                     const response = await fetch('http://localhost:3000/api/lyrics/generate', {
