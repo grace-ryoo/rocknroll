@@ -1,21 +1,25 @@
 const express = require('express');
 const cors = require('cors');
-require('dotenv').config();  // For loading environment variables (like the Gemini API key)
-const lyricsRoutes = require('./routes/lyricsRoutes');  // Import the API routes
+const dotenv = require('dotenv');
+const bodyParser = require('body-parser');
+
+// Initialize dotenv to load environment variables
+dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 3000;  // Set the port to 3000 or whatever is specified in .env
+const port = process.env.PORT || 3000;
 
-app.use(cors());  // Enable cross-origin requests
-app.use(express.json());  // Parse incoming JSON requests
+// Middleware
+app.use(cors()); // Allow cross-origin requests
+app.use(bodyParser.json()); // Parse incoming JSON requests
 
-// Test route to verify if the server is up
-app.get('/test', (req, res) => {
+// Simple route to check if server is running
+app.get('/', (req, res) => {
   res.send('Server is running!');
 });
 
-// Use the lyrics routes for API requests starting with /api/lyrics
-app.use('/api/lyrics', lyricsRoutes);
+// Route to handle generating lyrics
+app.post('/api/lyrics/generate', require('./controllers/lyricsController').generateLyrics);
 
 // Start the server
 app.listen(port, () => {
