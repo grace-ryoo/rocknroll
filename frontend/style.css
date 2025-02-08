@@ -80,6 +80,18 @@ form button {
     color: #493D9E;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+}
+
+.answer h2 {
+    font-family: 'Bangers', serif;
+    font-size: 40;
+    display: flex;
+    justify-content: center;
+}
+
+#lyricsText {
+    color: #780C28;
 }
 
 footer {

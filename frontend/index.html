@@ -29,21 +29,60 @@
         </section>
 
         <div class="questions">
-            <form>
+            <form id="lyricsForm">
                 <label for="theme">Enter a theme:</label>
-                <input type="text" name="themeAnswer" placeholder="theme" required></input>
-                <label for="theme">Enter an emotion:</label>
-                <input type="text" name="emotionAnswer" placeholder="emotion" required></input>
-                <button type="submit">Generate</button>
+                <input type="text" id="theme" name="theme" placeholder="theme" required></input>
+                <label for="emotion">Enter an emotion:</label>
+                <input type="text" id="emotion" name="emotion" placeholder="emotion" required></input>
+                <button type="submit">Generate Lyrics</button>
             </form>
         </div>
 
         <section class="answer">
-            <p>This is the response spot!</p>
+            <h2>Generated Lyrics:</h2>
+            <p id="lyricsText">Your lyrics will appear here!</p>
         </section>
 
         <footer>
             <a href="index.html">rock n roll again!</a>
         </footer>
+
+        <script>
+            document.getElementById('lyricsForm').addEventListener('submit', async function (event) {
+                event.preventDefault();
+                const theme = document.getElementById('theme').value;
+                const emotion = document.getElementById('emotion').value;
+                // Prepare the request data
+                const requestData = {
+                    theme: theme,
+                    emotion: emotion
+                };
+                try {
+                    // Make the POST request to the backend
+                    const response = await fetch('http://localhost:3000/api/lyrics/generate', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(requestData)
+                    });
+                    // Check if the response was successful
+                    if (response.ok) {
+                        const data = await response.json();
+                        // Display the generated lyrics in the result section
+                        const lyricsText = document.getElementById('lyricsText');
+                        lyricsText.textContent = data.verse || "No lyrics generated!";
+                    } else {
+                        console.error('Error generating lyrics:', response.statusText);
+                        const lyricsText = document.getElementById('lyricsText');
+                        lyricsText.textContent = "Failed to generate lyrics. Please try again!";
+                    }
+                } catch (error) {
+                    console.error('Error with the fetch request:', error);
+                    const lyricsText = document.getElementById('lyricsText');
+                    lyricsText.textContent = "An error occurred while generating lyrics. Please try again!";
+                }
+            });   
+        </script>
     </body>
 </html>
