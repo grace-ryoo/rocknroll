@@ -30,17 +30,24 @@ section p {
 }
 
 .questionOne {
-    padding: 5rem;
     color: #493D9E;
     display: flex;
     justify-content: center;
     align-items: flex-start;
 }
 
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 form textarea {
-    width: 100%;
+    width: 40%;
     border-radius: 5px;
     border-color: #780C28;
+    font-size: 40;
+    font-family: 'Luckiest Guy', serif;
 }
 
 form input:focus, form textarea:focus {
@@ -48,6 +55,7 @@ form input:focus, form textarea:focus {
 }
 
 .answerTwo {
+    
     padding: 5rem;
     color: #493D9E;
     display: flex;
