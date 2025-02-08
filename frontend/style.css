@@ -22,7 +22,8 @@ nav {
     color: #780C28;
     font-family: 'Rock Salt', serif;
     font-weight: 700;
-    font-size: 50;
+    font-size: 40;
+    text-align: center;
 }
 
 section p {
@@ -75,8 +76,12 @@ form button {
     border-radius: 5px;
 }
 
+hr {
+    margin-top: .3rem;
+    border: .5rem dashed white;
+}
 .answer {   
-    padding: 5rem;
+    padding: 1rem;
     color: #493D9E;
     display: flex;
     justify-content: center;
