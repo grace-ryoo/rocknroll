@@ -30,39 +30,42 @@ section p {
     font-size: 40;
 }
 
-.questionOne {
+.questions {
     color: #493D9E;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+    flex-direction: column;
 }
 
-.questionTwo {
+.questions label {
     color: #493D9E;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    font-family: 'Bangers', serif;
+    font-size: 40;
+    margin-bottom: 10px;
 }
 
 form {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
-form textarea {
-    width: 20%;
+form input, form textarea {
+    width: 80%;
     border-radius: 5px;
     border-color: #780C28;
     font-size: 40;
     font-family: 'Luckiest Guy', serif;
+    margin-bottom: 10px;
 }
 
 form input:focus, form textarea:focus {
     color: #493D9E;
 }
 
-.answerThree {   
+.answer {   
     padding: 5rem;
     color: #493D9E;
     display: flex;

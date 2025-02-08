@@ -28,28 +28,17 @@
             <h1>Let's start rocking and rolling!</h1>
         </section>
 
-        <section class="questionOne">
-            <p>Enter a theme:</p>
-        </section>
+        <div class="questions">
+            <form>
+                <label for="theme">Enter a theme:</label>
+                <input type="text" name="themeAnswer" placeholder="theme" required></input>
+                <label for="theme">Enter an emotion:</label>
+                <input type="text" name="emotionAnswer" placeholder="emotion" required></input>
+                <input type="submit" value="Generate">
+            </form>
+        </div>
 
-        <form>
-            <textarea id="userTextboxOne">
-
-            </textarea>
-        </form>
-
-        <section class="questionTwo">
-            <p>Enter an emotion:</p>
-        </section>
-
-        <form>
-            <textarea id="userTextboxTwo">
-                
-            </textarea>
-            <input type="submit" value="Generate">
-        </form>
-
-        <section class="answerThree">
+        <section class="answer">
             <p>This is the response spot!</p>
         </section>
 
