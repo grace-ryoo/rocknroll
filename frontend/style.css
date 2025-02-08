@@ -21,10 +21,12 @@ h1 {
     color: #780C28;
     font-family: 'Rock Salt', serif;
     font-weight: 700;
+    font-size: 50;
 }
 
 section p {
     font-family: 'Bangers', serif;
+    font-size: 40;
 }
 
 .questionOne {
@@ -32,6 +34,17 @@ section p {
     color: #493D9E;
     display: flex;
     justify-content: center;
+    align-items: flex-start;
+}
+
+form textarea {
+    width: 100%;
+    border-radius: 5px;
+    border-color: #780C28;
+}
+
+form input:focus, form textarea:focus {
+    color: #493D9E;
 }
 
 .answerTwo {
