@@ -37,6 +37,13 @@ section p {
     align-items: flex-start;
 }
 
+.questionTwo {
+    color: #493D9E;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
 form {
     display: flex;
     justify-content: center;
@@ -44,7 +51,7 @@ form {
 }
 
 form textarea {
-    width: 40%;
+    width: 20%;
     border-radius: 5px;
     border-color: #780C28;
     font-size: 40;
@@ -55,8 +62,7 @@ form input:focus, form textarea:focus {
     color: #493D9E;
 }
 
-.answerTwo {
-    
+.answerThree {   
     padding: 5rem;
     color: #493D9E;
     display: flex;
