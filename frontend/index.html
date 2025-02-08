@@ -69,9 +69,12 @@
                     // Check if the response was successful
                     if (response.ok) {
                         const data = await response.json();
+                        const lyrics = data.verse || "No lyrics generated!";
+                        const lines = lyrics.split("\n");
+                        const formattedLyrics = lines.map(line => `<p>${line}</p>`).join('');
                         // Display the generated lyrics in the result section
                         const lyricsText = document.getElementById('lyricsText');
-                        lyricsText.textContent = data.verse || "No lyrics generated!";
+                        lyricsText.innerHTML = formattedLyrics;
                     } else {
                         console.error('Error generating lyrics:', response.statusText);
                         const lyricsText = document.getElementById('lyricsText');
