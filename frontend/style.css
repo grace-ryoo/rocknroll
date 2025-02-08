@@ -12,15 +12,26 @@ nav {
 
 
 splash {
+    padding: 1rem;
+    background-color: #F7CFD8;
+}
 
+h1 {
+    display: flex;
+    justify-content: center;
+    color: #493D9E;
 }
 
 questionOne {
-
+    padding: 1rem;
+    color: #493D9E;
+    background-color: #F2EFE7;
 }
 
 answerTwo {
-
+    padding: 1rem;
+    color: #493D9E;
+    background-color: #1D1616;
 }
 
 footer {
