@@ -1,20 +1,18 @@
 body {
-
+    background-color: #F1F0E8;
 }
 
 nav {
     display: flex;
     justify-content: center;
     padding: .1rem 2rem;
-    background-color: transparent;
+    background-color: white;
     border: solid 3px #493D9E;
 }
 
 
-splash {
-    padding: 1rem;
-    background-color: #F7CFD8;
-}
+.splash {
+    padding: 3rem;}
 
 h1 {
     display: flex;
@@ -22,18 +20,24 @@ h1 {
     color: #493D9E;
 }
 
-questionOne {
-    padding: 1rem;
+.questionOne {
+    padding: 5rem;
     color: #493D9E;
-    background-color: #F2EFE7;
+    display: flex;
+    justify-content: center;
 }
 
-answerTwo {
-    padding: 1rem;
+.answerTwo {
+    padding: 5rem;
     color: #493D9E;
-    background-color: #1D1616;
+    display: flex;
+    justify-content: center;
 }
 
 footer {
-
+    display: flex;
+    justify-content: center;
+    padding: .1rem 2rem;
+    background-color: transparent;
+    border: solid 3px #493D9E;
 }
