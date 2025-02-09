@@ -71,10 +71,10 @@ form input:focus, form textarea:focus {
 form button {
     font-family: 'Bangers', serif;
     font-size: 40;
-    color: white;
+    color: #493D9E;
     width: 80%;
     height: 100%;
-    background-color: #F7CFD8;
+    background-color: #FFD95F;
     border-radius: 5px;
 }
 
@@ -118,5 +118,5 @@ footer a {
 
 footer a:hover {
     text-decoration: underline overline;
-    color: #780C28;
+    color: #FFD95F;
 }
