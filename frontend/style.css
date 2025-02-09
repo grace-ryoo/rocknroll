@@ -1,14 +1,16 @@
 body {
-    background-color: #F7CFD8;
+    background-color: #780C28;
     
 }
 
 nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     padding: .1rem 2rem;
     background-color: white;
     border: solid 3px #493D9E;
+    font-size: 60px;
+    color: #493D9E;
 }
 
 
@@ -19,10 +21,10 @@ nav {
 .splash h1 {
     display: flex;
     justify-content: center;
-    color: #780C28;
-    font-family: 'Rock Salt', serif;
+    color: white;
+    font-family: 'New Rocker', serif;
     font-weight: 700;
-    font-size: 40;
+    font-size: 60;
     text-align: center;
 }
 
@@ -40,7 +42,7 @@ section p {
 }
 
 .questions label {
-    color: #493D9E;
+    color: #FFD95F;
     font-family: 'Bangers', serif;
     font-size: 40;
     margin-bottom: 10px;
@@ -69,49 +71,49 @@ form input:focus, form textarea:focus {
 form button {
     font-family: 'Bangers', serif;
     font-size: 40;
-    color: #780C28;
+    color: white;
     width: 80%;
     height: 100%;
-    background-color: #FFD95F;
+    background-color: #F7CFD8;
     border-radius: 5px;
 }
 
-hr {
-    margin-top: .3rem;
-    border: .5rem dashed white;
-}
+
 .answer {   
     padding: 1rem;
-    color: #493D9E;
+    color: white;
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 
 .answer h2 {
-    font-family: 'Bangers', serif;
-    font-size: 40;
+    font-family: 'New Rocker', serif;
+    font-size: 50;
     display: flex;
     justify-content: center;
 }
 
 #lyricsText {
-    color: #780C28;
+    color: white;
     text-align: center;
+    border: .2rem solid;
 }
 
 footer {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     padding: .4rem 2rem;
     background-color: white;
     border: solid 3px #493D9E;
     font-family: 'Bangers', serif;
+    font-size: 25px;
+    color: #493D9E;
 }
 
 footer a { 
     text-decoration: none;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 footer a:hover {
